@@ -209,7 +209,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 4.1)
   rack-cors
-  rails (~> 6.0.3, >= 6.0.3.3)
+  rails (~> 6.0.3, >= 6.0.3.2)
   rspec-rails
   shoulda-matchers
   spring
@@ -219,4 +219,4 @@ RUBY VERSION
    ruby 2.7.0p0
 
 BUNDLED WITH
-   2.1.4
+   2.1.2
