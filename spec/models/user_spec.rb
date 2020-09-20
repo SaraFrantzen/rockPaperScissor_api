@@ -16,8 +16,8 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_confirmation_of :password }
 
     context "should not have an invalid email address" do
-      emails = ["asdf@ ds.com", "@example.com", "test me @yahoo.com",
-                "asdf@example", "ddd@.d. .d", "ddd@.d"]
+      emails = ["asdf@ ds.com", "@example.uk", "test me 4@yahoo.com",
+                "asdf@example", "ddd@.d  .d", "ddd@.d"]
 
       emails.each do |email|
         it { is_expected.not_to allow_value(email).for(:email) }
@@ -32,5 +32,9 @@ RSpec.describe User, type: :model do
         it { is_expected.to allow_value(email).for(:email) }
       end
     end
+  end
+
+  describe "Relations" do
+    it { is_expected.to have_many :performance_data }
   end
 end
